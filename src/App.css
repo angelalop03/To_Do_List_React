@@ -1,0 +1,170 @@
+/* Fondo general */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.app-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+}
+
+/* Botones */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Botón añadir */
+form button {
+  background-color: #6c63ff;
+  color: white;
+}
+
+form button:hover {
+  background-color: #574fd6;
+}
+
+/* Botones filtros */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filter-buttons button {
+  background-color: #ececec;
+  color: #333;
+}
+
+.filter-buttons button:hover {
+  background-color: #d6d6d6;
+}
+
+/* Lista de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada tarea */
+li {
+  background: #f9f9f9;
+  border-left: 6px solid #6c63ff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+li h3 {
+  margin: 0 0 8px;
+  color: #222;
+}
+
+li p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Tarea completada */
+.completed-task {
+  opacity: 0.7;
+  border-left-color: #28a745;
+}
+
+.completed-task h3 {
+  text-decoration: line-through;
+  color: #666;
+}
+
+/* Botones dentro de cada tarea */
+.task-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.task-actions button:first-child:hover {
+  background-color: #218838;
+}
+
+.task-actions button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.task-actions button:last-child:hover {
+  background-color: #b52a37;
+}
+
+/* Mensaje de carga */
+.loading {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+}
